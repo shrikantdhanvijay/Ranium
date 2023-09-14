@@ -66,7 +66,7 @@ class HomeService
                         $fastestId = $fvalue->id;
                     }
 
-                    // For Closest 
+                    // Closest asteroids find
                     if ($fvalue->close_approach_data[0]->miss_distance->kilometers < $closestDis || $closestDis == 0) {
                         $closestDis = $fvalue->close_approach_data[0]->miss_distance->kilometers;
                         $closestId = $fvalue->id;
