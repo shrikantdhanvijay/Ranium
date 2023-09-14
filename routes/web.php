@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AsteroidController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [AsteroidController::class, 'dashboard'])->name('/');
+Route::post('/get-asteroid', [AsteroidController::class, 'getAsteroid'])->name('/get-asteroid');
+
